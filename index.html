@@ -1,0 +1,88 @@
+<!-- Unit 13 Project
+Requirements
+[  ] Two Interactive Drop-down Inputs 
+[  ] Two Different jQuery Animation Methods 
+[  ] Add Five CSS Declarations
+[  ] Include Three Images
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Google Font
+[ no ] Feature 2 - Upload a Font
+[ no ] Feature 3 - .mouseover() Method
+[ no ] Feature 4 - :hover Feature 
+[ no ] Feature 5 - Add an Additional Interactive Drop-down
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Unit 13 Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Quiz About [Me]</h1>
+    <hr />
+    <!-- Movie Question -->
+    <form id="movie-form">
+      <label>
+        🎥 What is my favorite movie?
+        <select id="movie-answer">
+          <option value="movie1">movie 1</option>
+          <option value="movie2">movie 2</option>
+          <option value="movie3">movie 3</option>
+          <option value="movie4">movie 4</option>
+        </select>
+      </label>
+      <button type="submit">Check Movie Answer</button>
+    </form>
+    <div id="movie-result"></div>
+    <hr />
+    <!-- Book Question -->
+    <form id="book-form">
+      <label>
+        📖 What is my favorite book?
+        <select id="book-answer">
+          <option value="book1">book 1</option>
+          <option value="book2">book 2</option>
+          <option value="book3">book 3</option>
+          <option value="book4">book 4</option>
+        </select>
+      </label>
+      <button type="submit">Check Book Answer</button>
+    </form>
+    <div id="book-result"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      //Movie Question jQuery Code
+      $("#movie-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#movie-answer");
+        var answer = $answer.val();
+
+        if (answer === "movie1") {
+          $("#movie-result").text("YESSSS!");
+        } else {
+          $("#movie-result").text("Try Again!");
+        }
+      });
+
+      //Book Question jQuery Code
+      $("#book-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#book-answer");
+        var answer = $answer.val();
+
+        if (answer === "book1") {
+          $("#book-result").text("YESSSS!");
+        } else {
+          $("#book-result").text("Try Again!");
+        }
+      });
+    </script>
+  </body>
+
+  <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
+</html>

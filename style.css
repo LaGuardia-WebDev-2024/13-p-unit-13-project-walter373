@@ -1,0 +1,22 @@
+#movie-result {
+  background: rgb(244, 98, 181);
+  border: 5px solid black;
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#book-result {
+  background: rgb(196, 159, 255);
+  border: 5px solid black;
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+hr {
+  height: 5px;
+  background-color: black;
+}
