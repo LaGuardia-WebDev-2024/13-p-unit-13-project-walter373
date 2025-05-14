@@ -21,64 +21,77 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>The Impossible Quiz</h1>
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="silly-form1">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        The Answer Is Really Big?
+        <select id="imp-answer1">
+          <option value="big1">REALLY BIG</option>
+          <option value="big2">infinity</option>
+          <option value="big3">an elephant</option>
+          <option value="big4">ur mom</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="imp-result1"></div>
     <hr />
     <!-- Book Question -->
-    <form id="book-form">
+    <form id="silly-form2">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        What IS this?
+        <select id="imp-answer2">
+          <option value="ler1">ballet bun</option>
+          <option value="ler2">fairy cake</option>
+          <option value="ler3">a-bun-dance</option>
+          <option value="ler4">CRUEL!</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="imp-result2">
+      <img
+        src="https://cdn.glitch.global/287663da-4541-4a50-83d0-1830c68079c0/balletbun.PNG?v=1746719702943"
+        height="160"
+      />
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("h1").hide();
+        $("h1").slideDown(1000);
       //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("#silly-form1").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#imp-answer1");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "big3") {
+          
+                 $("#imp-result1").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')").css("background-size","contain");
         } else {
-          $("#movie-result").text("Try Again!");
+    
+           $("#imp-result1").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')").css("background-size","contain");
         }
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#silly-form2").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#imp-answer2");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "ler1") {
+         
+                           $("#imp-result2").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')").css("background-size","contain");
+          
+          
         } else {
-          $("#book-result").text("Try Again!");
+            $("#imp-result2").hide().css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')").css("background-size","contain").fadeIn(2000);
+          
         }
       });
     </script>

@@ -1,4 +1,4 @@
-#movie-result {
+#imp-result1 {
   background: rgb(244, 98, 181);
   border: 5px solid black;
   font-size: 24px;
@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-#book-result {
+#imp-result2 {
   background: rgb(196, 159, 255);
   border: 5px solid black;
   font-size: 24px;
@@ -19,4 +19,15 @@
 hr {
   height: 5px;
   background-color: black;
+}
+@font-face {
+  font-family: impossible;
+  src:url(https://cdn.glitch.global/287663da-4541-4a50-83d0-1830c68079c0/Maya_s_Script.ttf?v=1747150443760);
+}
+body {
+  font-family: impossible;
+  font-size: 3em;
+}
+h1 {
+ text-align:center;
 }
