@@ -22,12 +22,12 @@ hr {
 }
 @font-face {
   font-family: impossible;
-  src:url(https://cdn.glitch.global/287663da-4541-4a50-83d0-1830c68079c0/Maya_s_Script.ttf?v=1747150443760);
+  src: url(https://cdn.glitch.global/287663da-4541-4a50-83d0-1830c68079c0/Maya_s_Script.ttf?v=1747150443760);
 }
 body {
   font-family: impossible;
   font-size: 3em;
 }
 h1 {
- text-align:center;
+  text-align: center;
 }

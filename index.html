@@ -53,6 +53,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="imp-result2">
       <img
+        id="bundance"
         src="https://cdn.glitch.global/287663da-4541-4a50-83d0-1830c68079c0/balletbun.PNG?v=1746719702943"
         height="160"
       />
@@ -60,7 +61,7 @@ Select ONE Additional Feature to Add
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("h1").hide();
-        $("h1").slideDown(1000);
+      $("h1").slideDown(1000);
       //Movie Question jQuery Code
       $("#silly-form1").on("submit", function (event) {
         event.preventDefault();
@@ -69,11 +70,19 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "big3") {
-          
-                 $("#imp-result1").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')").css("background-size","contain");
+          $("#imp-result1")
+            .css(
+              "background-image",
+              "url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')"
+            )
+            .css("background-size", "contain");
         } else {
-    
-           $("#imp-result1").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')").css("background-size","contain");
+          $("#imp-result1")
+            .css(
+              "background-image",
+              "url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')"
+            )
+            .css("background-size", "contain");
         }
       });
 
@@ -84,14 +93,24 @@ Select ONE Additional Feature to Add
         var $answer = $("#imp-answer2");
         var answer = $answer.val();
 
+        $("#bundance").hide();
+
         if (answer === "ler1") {
-         
-                           $("#imp-result2").css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')").css("background-size","contain");
-          
-          
+          $("#imp-result2")
+            .css(
+              "background-image",
+              "url('https://static.wikia.nocookie.net/impossible-quiz/images/7/76/Screenshot_2014-06-06-18-17-24.png')"
+            )
+            .css("background-size", "contain");
         } else {
-            $("#imp-result2").hide().css("background-image","url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')").css("background-size","contain").fadeIn(2000);
-          
+          $("#imp-result2")
+            .hide()
+            .css(
+              "background-image",
+              "url('https://static.wikia.nocookie.net/impossible-quiz/images/6/63/Wrong%21.png')"
+            )
+            .css("background-size", "contain")
+            .fadeIn(2000);
         }
       });
     </script>
